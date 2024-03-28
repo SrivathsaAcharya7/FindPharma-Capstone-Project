@@ -1,0 +1,33 @@
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col mt-2">
+            <div class="table-responsive glassmorphic">
+                <table class="table table-bordered">
+                    <thead class="thead-light text-center">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Order-Date</th>
+                            <th>Order-Id</th>
+                            <th>Paid Amount</th>
+                            <th>Order-Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-secondary text-center" *ngFor="let o of orders; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ o.date }}</td>
+                            <td>{{ o.oid }}</td>
+                            <td>{{ o.paidAmount | currency: 'INR' }}</td>
+                            <td>
+                                <button class="btn btn-success" (click)="getOrderDetails(o.oid)">View Order
+                                    Details</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

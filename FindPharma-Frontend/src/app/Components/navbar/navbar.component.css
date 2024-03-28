@@ -1,0 +1,30 @@
+.navbar {
+    background: rgba(255, 255, 255, 0.8); /* Adjust opacity for the glass effect */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.navbar-brand img {
+    max-width: 100px; /* Adjust the maximum width of the logo */
+}
+
+.navbar-toggler-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for the toggler icon */
+}
+
+.navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.7); /* Adjust text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.9); /* Adjust hover text color */
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Adjust active link font weight */
+}
+
+.btn {
+    border-radius: 20px; /* Optional: Add border radius to buttons */
+}

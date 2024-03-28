@@ -1,0 +1,44 @@
+.glassmorphic {
+    background: rgba(255, 255, 255, 0.3); /* Adjust opacity to your liking */
+    border: none;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin to create gap */
+}
+
+.form-group label {
+    color: black;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.2); /* Adjust opacity to your liking */
+    border: none;
+    border-radius: 10px;
+    color: black;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.4); /* Adjust opacity to your liking */
+    box-shadow: none;
+    color: black;
+}
+
+.btn-primary,
+.btn-danger {
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+    opacity: 0.8; /* Adjust hover opacity */
+}
+
+.btn-primary:active,
+.btn-danger:active {
+    opacity: 0.6; /* Adjust active opacity */
+}
+
+.modal-body {
+    text-align: center;
+}

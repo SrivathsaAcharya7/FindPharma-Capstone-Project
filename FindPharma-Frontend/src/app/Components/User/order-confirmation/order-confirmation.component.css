@@ -1,0 +1,56 @@
+.glassmorphic {
+    background: rgba(255, 255, 255, 0.3); /* Adjust opacity to your liking */
+    border: none;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin to create gap */
+}
+
+.card-header,
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to your liking */
+    color: white;
+}
+
+.card-header h3,
+.card-footer h6 {
+    margin-bottom: 0;
+}
+
+.card {
+    border: none;
+}
+
+.card.mx-auto {
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card.flex-row {
+    border-radius: 15px;
+}
+
+.card-img-left.img-thumbnail {
+    border-radius: 10px;
+}
+
+.text-muted {
+    color: #6c757d; /* Adjust color to your liking */
+}
+
+.btn-success {
+    background-color: rgba(40, 167, 69, 0.8); /* Adjust opacity to your liking */
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: rgba(40, 167, 69, 1); /* Adjust opacity to your liking */
+}
+
+.btn-success:active {
+    background-color: rgba(40, 167, 69, 0.6); /* Adjust opacity to your liking */
+}

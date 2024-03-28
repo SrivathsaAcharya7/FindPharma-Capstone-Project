@@ -1,0 +1,22 @@
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.input-group-text img {
+    width: 20px;
+    height: 20px;
+}
+
+    #img {
+        width: 100%; /* Adjust width as needed */
+        height: 500px; /* Adjust height as needed */
+        margin-bottom: 20px; /* Add margin to separate from the navbar */
+    }
+
+    /* Adjust the carousel images to cover the entire carousel area */
+    /* .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */

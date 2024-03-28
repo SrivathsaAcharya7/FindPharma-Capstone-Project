@@ -1,0 +1,39 @@
+<nav *ngIf="!isLoginPage" class="navbar navbar-expand-lg navbar-light bg-light glassmorphic-navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" routerLink="/"><img src="assets/Images/FindPharma-Logo.jpg" alt="Logo"
+                style="width:100px;height:45px;"></a>
+        <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
+            <li *ngIf="!isAdminPage && !loginService.isLoggedIn()" class="nav-item">
+                <a class="nav-link" routerLink="/get/all/class/All-Medicines" class="btn btn-dark"> Buy Medicines<span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li *ngIf="!isAdminPage && !loginService.isLoggedIn()" class="nav-item mr-1">
+                <a routerLink="/get/cart/details" role="button" class="btn btn-dark"><small>Cart total: {{totalPrice |
+                        currency:
+                        'INR'}} </small> <i class='fas fa-cart-arrow-down'></i>&nbsp;<span
+                        class="badge badge-success">{{totalQuantity}}</span></a>
+            </li>
+            <li class="nav-item mr-1">
+                <a *ngIf="!loginService.isLoggedIn()" routerLink="/user/signup" role="button" class="btn btn-outline-primary">Sign
+                    Up</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginService.isLoggedIn()" routerLink="/user/login" role="button"
+                    class="btn btn-outline-success">Login</a>
+            </li>
+            <li class="nav-item mr-1">
+                <a class="btn btn-outline-primary" *ngIf="loginService.isLoggedIn()" role="button" (click)="home()"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-info" *ngIf="loginService.isLoggedIn()" role="button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

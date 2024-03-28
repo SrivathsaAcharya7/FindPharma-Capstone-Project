@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+            <br>
+            <span style="font-size: 1.5rem;">Products</span>
+            <span class="float-right mt-2">
+                <a class="btn btn-light btn-sm dropdown-toggle" href="#" data-toggle="dropdown" role="button">
+                    Sort by
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" role="button" (click)="sortByPriceLowToHigh()">Price: Low To High</a>
+                    <a class="dropdown-item" role="button" (click)="sortByPriceHighToLow()">Price: High To Low</a>
+                    <a class="dropdown-item" role="button" (click)="sortByNameAscending()">Name: A-Z</a>
+                    <a class="dropdown-item" role="button" (click)="sortByNameDescending()">Name: Z-A</a>
+                </div>
+            </span>
+            <div class="row mt-3">
+                <div class="col-md-4 mb-4" *ngFor="let p of product | paginate : {itemsPerPage: tableSize, currentPage: page, totalItems: count}">
+                    <div class="card h-100 bg-light d-flex flex-column">
+                        <img [src]="p.img" class="card-img-top img-thumbnail" width="200" height="200">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{p.name}}</h5>
+                            <p class="card-text">&#8377; {{p.price}}</p>
+                            <p class="card-text"><small class="text-muted">By {{p.brand}}</small></p>
+                            <small>Description: {{p.description}}</small>
+                            <br>
+                            <small>Contains: <span class="font-weight-bold">{{p.salt}}</span></small>
+                            <div class="mt-auto">
+                                <button class="btn btn-success" *ngIf="p.available" (click)="addToCart(p)">Add to cart</button>
+                                <button class="btn btn-secondary" *ngIf="!p.available" disabled>Out of Stock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-1">
+                <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+                </pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>
